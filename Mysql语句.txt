@@ -1,0 +1,29 @@
+create table booktable(
+id int unsigned not null auto_increment comment'自增id',
+book_id varchar(20)not null comment'图书id',
+author_id varchar(20)not null comment'作者id',
+book_name varchar(40)not null comment'图书名',
+pages int not null comment'图书页数',
+price decimal(5,2) comment'图书价格',
+press varchar(40) comment'出版社',
+primary key(book_id),
+key index_id(id)
+)engine=innodb default charset=utf8mb4 comment'图书表';
+
+create table awardtable(
+id int unsigned not null auto_increment comment'自增id',
+book_id varchar(20)not null comment'图书id',
+author_id varchar(20)not null comment'作者id',
+cup_type varchar(20)not null comment'获奖类别',
+cup_time date comment'获奖时间',
+key index_id(id)
+)engine=innodb default charset=utf8mb4 comment'奖项表';
+
+create table authortable(
+id int unsigned not null auto_increment comment'自增id',
+author_id varchar(20)not null comment'作者id',
+author_name varchar(30)not null comment'作者名',
+content varchar(300) comment'作者简介',
+primary key(author_id),
+key index_id(id)
+)engine=innodb default charset=utf8mb4 comment'作者表';
