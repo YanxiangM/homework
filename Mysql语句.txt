@@ -1,29 +1,29 @@
 create table booktable(
-id int unsigned not null auto_increment comment'×ÔÔöid',
-book_id varchar(20)not null comment'Í¼Êéid',
-author_id varchar(20)not null comment'×÷Õßid',
-book_name varchar(40)not null comment'Í¼ÊéÃû',
-pages int not null comment'Í¼ÊéÒ³Êı',
-price decimal(5,2) comment'Í¼Êé¼Û¸ñ',
-press varchar(40) comment'³ö°æÉç',
+id int unsigned not null auto_increment comment'è‡ªå¢id',
+book_id varchar(20)not null comment'å›¾ä¹¦id',
+author_id varchar(20)not null comment'ä½œè€…id',
+book_name varchar(40)not null comment'å›¾ä¹¦å',
+pages int not null comment'å›¾ä¹¦é¡µæ•°',
+price decimal(5,2) comment'å›¾ä¹¦ä»·æ ¼',
+press varchar(40) comment'å‡ºç‰ˆç¤¾',
 primary key(book_id),
 key index_id(id)
-)engine=innodb default charset=utf8mb4 comment'Í¼Êé±í';
+)engine=innodb default charset=utf8mb4 comment'å›¾ä¹¦è¡¨';
 
 create table awardtable(
-id int unsigned not null auto_increment comment'×ÔÔöid',
-book_id varchar(20)not null comment'Í¼Êéid',
-author_id varchar(20)not null comment'×÷Õßid',
-cup_type varchar(20)not null comment'»ñ½±Àà±ğ',
-cup_time date comment'»ñ½±Ê±¼ä',
+id int unsigned not null auto_increment comment'è‡ªå¢id',
+book_id varchar(20)not null comment'å›¾ä¹¦id',
+author_id varchar(20)not null comment'ä½œè€…id',
+cup_type varchar(20)not null comment'è·å¥–ç±»åˆ«',
+cup_time date comment'è·å¥–æ—¶é—´',
 key index_id(id)
-)engine=innodb default charset=utf8mb4 comment'½±Ïî±í';
+)engine=innodb default charset=utf8mb4 comment'å¥–é¡¹è¡¨';
 
 create table authortable(
-id int unsigned not null auto_increment comment'×ÔÔöid',
-author_id varchar(20)not null comment'×÷Õßid',
-author_name varchar(30)not null comment'×÷ÕßÃû',
-content varchar(300) comment'×÷Õß¼ò½é',
+id int unsigned not null auto_increment comment'è‡ªå¢id',
+author_id varchar(20)not null comment'ä½œè€…id',
+author_name varchar(30)not null comment'ä½œè€…å',
+content varchar(300) comment'ä½œè€…ç®€ä»‹',
 primary key(author_id),
 key index_id(id)
-)engine=innodb default charset=utf8mb4 comment'×÷Õß±í';
+)engine=innodb default charset=utf8mb4 comment'ä½œè€…è¡¨';
